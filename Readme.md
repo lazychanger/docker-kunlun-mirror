@@ -14,7 +14,7 @@ pyscan scan -t /root/Kunlun-M/tests/vulnerabilities/
 pysacn show rule
 
 # 展示所有php的rule
-python3 kunlun.py show rule -k php    
+pyscan show rule -k php    
 ````
 
 ## 如何使用
