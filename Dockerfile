@@ -11,5 +11,3 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 WORKDIR /root
 
 COPY --chmod=a+x ./pyscan /usr/bin/pyscan:ax
-
-CMD ["pyscan", "console"]
