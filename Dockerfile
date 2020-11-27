@@ -8,6 +8,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
   && python kunlun.py init \
   && apk del curl wget git && rm -rf /var/cache/apk/*
 
+RUN chmod -R 0755 /root/Kunlun-M/logs
+
 WORKDIR /root
 
-COPY --chmod=a+x ./pyscan /usr/bin/pyscan
+COPY ./pyscan /usr/bin/pyscan
+#COPY --chmod=a+x ./docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
