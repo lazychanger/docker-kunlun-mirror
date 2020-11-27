@@ -20,7 +20,12 @@ pyscan show rule -k php
 ## 如何使用
 
 ```shell script
-docker run -v projects:/root --rm docker-kunlun-mirror:latest pyscan scan -t /root/projects  
+# 扫描文件
+docker run -v projects:/root --rm docker-kunlun-mirror:latest pyscan scan -t /root/projects
+
+# 昆仑镜终端
+docker run -it -v projects:/root --rm docker-kunlun-mirror:latest pyscan console
+  
 ```
 
 ## Todo
