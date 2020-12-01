@@ -20,16 +20,10 @@ pyscan show rule -k php
 pysacn console
 ````
 ## 推荐使用，完整流程示例
-由于Kunlun-M 直接启动console模式，结果集无法获取。
-
-所以推荐先进入sh然后使用助手指令启动终端，然后通过 docker cp命令复制结果
 
 ```shell script
-# 进入docker终端
-docker run --name kunlun -it -v /root/projects:/root/projects --rm kunlun-mirror:latest /bin/sh
-
-# 进入console模式
-pyscan console
+# 进入昆仑console终端
+docker run --name kunlun -it -v /root/projects:/root/projects --rm kunlun-mirror:latest pyscan console
 
 # 进入扫描模式
 scan
