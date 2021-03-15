@@ -12,12 +12,6 @@ RUN apk update && apk upgrade && apk add --no-cache curl wget git \
 
 WORKDIR /root
 
-
-#COPY docker-entrypoint.sh /root/docker-entrypoint.sh
 COPY ./pyscan /usr/bin/pyscan
 
 EXPOSE 9999
-
-#ENTRYPOINT ["nohup", "pyscan web", "9999", "&"]
-
-#COPY --chmod=a+x ./docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
