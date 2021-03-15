@@ -18,6 +18,6 @@ COPY ./pyscan /usr/bin/pyscan
 
 EXPOSE 9999
 
-ENTRYPOINT ["nohup", "pyscan web", "9999", "&"]
+#ENTRYPOINT ["nohup", "pyscan web", "9999", "&"]
 
 #COPY --chmod=a+x ./docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
