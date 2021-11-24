@@ -1,7 +1,7 @@
 FROM python:3.9-alpine
 
 # 镜像加速
-#RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk update && apk upgrade && apk add --no-cache curl wget git \
   && cd /root && git clone https://github.com/LoRexxar/Kunlun-M && cd ./Kunlun-M \
@@ -10,8 +10,14 @@ RUN apk update && apk upgrade && apk add --no-cache curl wget git \
   && python kunlun.py init \
   && apk del curl wget git && rm -rf /var/cache/apk/*
 
+RUN echo "hello world"
+
 WORKDIR /root
 
 COPY ./pyscan /usr/bin/pyscan
 
 EXPOSE 9999
+
+CMD ["echo", "hello world"]
+
+
